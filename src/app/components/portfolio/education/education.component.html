@@ -1,0 +1,27 @@
+<div class="blockPortfolio">
+    <div class="row">
+      <div class="col-sm-11">
+        <h4>Educación</h4>
+      </div>
+      <div class="col-sm-1">
+        <app-icon-add (addItemEvent)="showModal(newEducation)">
+        </app-icon-add>
+      </div>
+    </div>
+    <div class="row" *ngFor="let e of educations">
+      <div class="col-sm-1 col-avatar">
+        <p-avatar image="/assets/images/sombrero-lapiz.jpeg" class="p-avatar-square p-avatar-l" size="large" shape="square"></p-avatar>
+      </div>
+      <div class="col-sm-10">
+        <span class="font-weight-bolder">{{e.nombreUniversidad}}</span>
+        <br/>
+        <span>{{e.carrera}}</span>
+        <br/>
+        <span>{{e.fechaDesde}} - {{e.fechaHasta ? e.fechaHasta : 'Actualmente'}}</span>
+      </div>
+      <div class="col-sm-1">
+        <app-icon-edit-delete (editItemEvent)="showModal(e)" (deleteItemEvent)="delete(e.id)">
+        </app-icon-edit-delete>
+      </div>
+    </div>
+</div>

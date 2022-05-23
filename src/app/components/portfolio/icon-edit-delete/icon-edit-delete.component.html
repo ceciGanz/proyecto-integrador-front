@@ -1,0 +1,4 @@
+<ng-container *ngIf="loginService.loggedSubject() | async">
+    <span class="myIcon"><i class="pi pi-pencil" (click)="edit()"></i></span>
+    <span class="myIcon"><i class="pi pi-trash" (click)="delete()"></i></span>
+</ng-container>

@@ -1,0 +1,21 @@
+<div class="blockPortfolio">
+    <div class="row">
+        <div class="col-sm-11">
+            <h4>Habilidades</h4>
+        </div>
+        <div class="col-sm-1">
+            <app-icon-add (addItemEvent)="showModal(newSkill)">
+            </app-icon-add>
+        </div>
+    </div>
+    <div class="row" *ngFor="let s of skills">
+        <div class="col-sm-11">
+            <span>{{s.nombre}}</span>
+            <p-progressBar [value]="s.progreso" [style]="{'height': '1rem', 'width': '80%'}"></p-progressBar>
+        </div>
+        <div class="col-sm-1">
+            <app-icon-edit-delete (editItemEvent)="showModal(s)" (deleteItemEvent)="delete(s.id)">
+            </app-icon-edit-delete>
+        </div>
+    </div>
+</div>

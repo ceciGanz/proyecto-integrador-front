@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+      "target": "https://proyecto-dev-full-stack.herokuapp.com",
+      "secure": false,
+      "logLevel": "debug"
+    }
+}

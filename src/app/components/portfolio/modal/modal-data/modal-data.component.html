@@ -1,0 +1,87 @@
+<app-modal-item>
+    <ng-container title-header>
+      <h2>Editar datos personales</h2>
+    </ng-container>
+    <ng-container form>
+      <form [formGroup]="form">
+        <div class="form-group">
+          <!--
+          <p-fileUpload 
+            name="myfile[]"
+            (onUpload)="onUpload($event)"
+            (onBeforeUpload)="onBeforeUpload($event)"
+            (onSelect)="onSelect($event)"
+            accept="image/*"
+            mode="basic"
+            [customUpload]="true"
+            [showUploadButton]="false"
+          >
+          </p-fileUpload>
+          -->
+          <div id="myAvatar">
+            <p-avatar [image]="urlProfileImage" class="p-avatar-circle p-avatar-xl" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+            <label for="fileUpload">
+              <span class="myIcon"><i class="pi pi-upload" ></i></span>
+              <span class="myIcon">{{selectedFile?.name}}</span>
+            </label>
+            <input id="fileUpload" style="display: none;" type="file" class="file-upload" (change)="onSelectImage($event)" accept="image/*" />
+          </div>
+        </div>
+        <div class="form-group">
+            <input
+              pInputText
+              formControlName="nombre"
+              placeholder="Nombre"
+              name="nombre"
+              class="form-control"
+              id="nombre"
+            />
+            <app-messages-error [control]="nombre"></app-messages-error>
+        </div>
+        <div class="form-group">
+            <input
+              pInputText
+              formControlName="apellido"
+              placeholder="Apellido"
+              name="apellido"
+              class="form-control"
+              id="apellido"
+            />
+            <app-messages-error [control]="apellido"></app-messages-error>
+        </div>
+        <div class="form-group">
+            <input
+              pInputText
+              formControlName="titulo"
+              placeholder="Titulo"
+              name="titulo"
+              class="form-control"
+              id="titulo"
+            />
+            <app-messages-error [control]="titulo"></app-messages-error>
+        </div>
+        <div class="form-group">
+            <input
+              pInputText
+              formControlName="direccion"
+              placeholder="Direccion"
+              name="direccion"
+              class="form-control"
+              id="direccion"
+            />
+            <app-messages-error [control]="direccion"></app-messages-error>
+        </div>
+        <div class="footer-modal">
+          <p-button
+            (click)="submit()"
+            [disabled]="form.invalid"
+            [ngClass]="{ 'disable-click': form.invalid }"
+            label="Guardar"
+            class="button-modal"
+          ></p-button>
+          <p-button (click)="closeModal(data)" label="Cancelar" class="button-modal">
+          </p-button>
+        </div>
+      </form>
+    </ng-container>
+  </app-modal-item>

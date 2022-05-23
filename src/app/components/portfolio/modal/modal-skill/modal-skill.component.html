@@ -1,0 +1,43 @@
+<app-modal-item>
+  <ng-container title-header>
+    <h2>{{ data.id ? "Editar habilidad" : "Crear habilidad" }}</h2>
+  </ng-container>
+  <ng-container form>
+    <form [formGroup]="form">
+      <div class="form-group">
+        <input
+          pInputText
+          formControlName="nombre"
+          placeholder="Nombre"
+          class="form-control"
+          id="nombre"
+        />
+        <app-messages-error [control]="nombre"></app-messages-error>
+      </div>
+      <div class="form-group">
+        <p-inputNumber
+          formControlName="progreso"
+          placeholder="Progreso"
+          mode="decimal"
+          [showButtons]="true"
+          inputId="minmax-buttons"
+          [min]="0"
+          [max]="100"
+        >
+        </p-inputNumber>
+        <app-messages-error [control]="progreso"></app-messages-error>
+      </div>
+      <div class="footer-modal">
+        <p-button
+          (click)="submit()"
+          [disabled]="form.invalid"
+          [ngClass]="{ 'disable-click': form.invalid }"
+          label="Guardar"
+          class="button-modal"
+        ></p-button>
+        <p-button (click)="closeModal()" label="Cancelar" class="button-modal">
+        </p-button>
+      </div>
+    </form>
+  </ng-container>
+</app-modal-item>

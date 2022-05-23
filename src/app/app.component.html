@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
+<app-spinner></app-spinner>
+<p-toast></p-toast>
+<p-confirmDialog
+    [style]="{width: '50vw'}" 
+    [closable]="false" 
+    acceptLabel="Aceptar" 
+    acceptIcon=""
+    rejectLabel="Cancelar"
+    rejectIcon=""
+    [baseZIndex]="10000">
+</p-confirmDialog>

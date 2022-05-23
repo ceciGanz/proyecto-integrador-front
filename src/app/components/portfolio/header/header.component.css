@@ -1,0 +1,28 @@
+#myAvatar {
+    /*position: relative;
+    top: -4rem;
+    left: 1rem;
+    */
+    margin-top: -4rem;
+    margin-left: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+:host ::ng-deep .p-avatar.p-avatar-xl {
+    width: 8rem;
+    height: 8rem;
+    font-size: 4rem;
+}
+
+:host ::ng-deep .p-panel .p-panel-header {
+    padding: 0.5rem 0.75rem;
+    
+}
+
+:host ::ng-deep .p-panel .p-panel-content {
+    padding: 0.75rem;
+}

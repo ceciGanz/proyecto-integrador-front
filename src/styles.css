@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    width: 100%;
+    line-height: 1.25;
+    /* The new syntax needed by standard-compliant browsers (IE 10 and Firefox 10 onwards), without prefix */
+    /*background: linear-gradient(to bottom, black, var(--purple));*/
+}
+
+.blockPortfolio {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    padding-left: 2.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 1px solid #dee2e6;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    border-radius: 0.7rem;
+}
+
+.myIcon {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    cursor: pointer;
+    /*display: none;*/
+}
+
+.myIcon i {
+    font-size: 1.2rem;
+}
+
+/* BEGIN STYLES MODAL */
+.p-dialog .p-dialog-header {
+    border-bottom: 0px ;
+}
+
+.p-dialog .p-dialog-footer {
+    border-top: 0px ;
+}
+
+:host ::ng-deep .p-dialog .p-button {
+    min-width: 4rem;
+}
+
+.p-dialog .p-dialog-header {
+    padding: 0.8rem;
+}
+
+.p-dialog .p-dialog-content {
+    padding: 0.8rem;
+}
+
+.p-dialog .p-dialog-footer {
+    padding: 0.8rem;
+}
+.footer-modal {
+    text-align: right;
+}
+.button-modal {
+    margin-right: 0.65rem;
+}
+
+/* END STYLES MODAL */
+
+.disable-click {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+div.row.ng-star-inserted {
+    margin-bottom: 1.25rem;
+}
+
+.p-panel-header {
+    /*background: linear-gradient(to right,indigo, white) !important;*/
+    border-bottom-left-radius: 00.7rem;
+    border-bottom-right-radius: 00.7rem;
+}
+.p-panel .p-panel-content {
+    /*background: linear-gradient(to right,indigo, white) !important;*/
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    border-radius: 0.7rem;
+}
+
+.blockPortfolio {
+    /*
+    background: linear-gradient(45deg, red, blue);
+    */
+}
+
+.col-avatar {
+    text-align: right;
+}

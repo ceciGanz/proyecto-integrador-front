@@ -1,0 +1,53 @@
+<p-dialog
+  [(visible)]="show"
+  [modal]="true"
+  [style]="{ width: '40vw' }"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+  [closable]="false"
+>
+  <ng-template pTemplate="header">
+    <h3>Iniciar sesión</h3>
+  </ng-template>
+  <ng-template pTemplate="content">
+    <form [formGroup]="loginForm">
+      <div class="form-group">
+        <input
+          type="text"
+          pInputText
+          formControlName="user"
+          name="user"
+          placeholder="User"
+          class="form-control"
+        />
+        <app-messages-error [control]="user"></app-messages-error>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          pPassword
+          [feedback]="false"
+          formControlName="password"
+          name="password"
+          placeholder="Password"
+          class="form-control"
+        />
+        <app-messages-error [control]="password"></app-messages-error>
+      </div>
+    </form>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p-button
+      (click)="login()"
+      [disabled]="loginForm.invalid"
+      [ngClass]="{'disable-click': loginForm.invalid}"
+      label="Entrar"
+    ></p-button>
+    <p-button
+      (click)="closeModal()"
+      label="Cancelar"
+    ></p-button>
+  </ng-template>
+</p-dialog>
+<p-toast></p-toast>
